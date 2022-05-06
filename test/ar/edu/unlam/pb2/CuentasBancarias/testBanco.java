@@ -132,6 +132,8 @@ c. Cuenta Corriente. */
 		Double esperado=323.0;
 		
 		assertEquals(esperado,obtenido,0.01);
+		
+		System.out.println(cc.getClientesCc());
 	
 	}
 

@@ -1,5 +1,8 @@
 package ar.edu.unlam.pb2.CuentasBancarias;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class CuentaCorriente extends Cuenta {
 
 	/*La más compleja de las cuentas, ésta permite establecer una cantidad de dinero a
@@ -11,9 +14,20 @@ Por ejemplo, si tuviéramos $ 100 en la cuenta, y quisiéramos retirar $ 200 (con 
 descubierto de $ 150), podremos hacerlo. Pasaremos a deberle al banco $ 105 en
 total: los $ 100 que nos cubrió, más el 5% adicional sobre el descubierto otorgado. */
 	
+	private Set<Cliente> clientesCc;	
 	
 	public CuentaCorriente(Integer cbu, Cliente cliente, Double saldoActual) {
 		super(cbu, cliente, saldoActual);
+		clientesCc=new HashSet<Cliente>();
+		clientesCc.add(cliente);
+	}
+
+	public Set<Cliente> getClientesCc() {
+		return clientesCc;
+	}
+
+	public void setClientesCc(Set<Cliente> clientesCc) {
+		this.clientesCc = clientesCc;
 	}
 
 	@Override

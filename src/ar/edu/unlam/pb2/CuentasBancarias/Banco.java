@@ -1,6 +1,7 @@
 package ar.edu.unlam.pb2.CuentasBancarias;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -10,7 +11,7 @@ public class Banco {
 	private String nombre;
 	private List<CuentaCorriente> cuentasCorrientes;
 	private List<CajaDeAhorro> cajasDeAhorro;
-	private List<Cliente> clientes;
+	private Set<Cliente> clientes;
 	private Integer cbu;
 	private Double saLdoActual;
 	
@@ -50,11 +51,11 @@ public class Banco {
 		this.cajasDeAhorro = cajasDeAhorro;
 	}
 
-	public List<Cliente> getClientes() {
+	public Set<Cliente> getClientes() {
 		return clientes;
 	}
 
-	public void setClientes(List<Cliente> clientes) {
+	public void setClientes(HashSet<Cliente> clientes) {
 		this.clientes = clientes;
 	}
 
